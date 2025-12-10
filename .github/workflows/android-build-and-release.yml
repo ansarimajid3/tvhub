@@ -20,8 +20,7 @@ jobs:
           api-level: 34
           build-tools: "34.0.0"
           components: "platform-tools,platforms;android-34,build-tools;34.0.0"
-      - run: chmod +x ./gradlew
-      - run: ./gradlew assembleDebug --no-daemon
+      - run: gradle assembleDebug --no-daemon
       - uses: actions/upload-artifact@v4
         with:
           name: app-debug-apk
